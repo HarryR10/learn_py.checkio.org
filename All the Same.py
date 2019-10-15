@@ -3,33 +3,7 @@ from typing import List, Any
 
 def all_the_same(elements: List[Any]) -> bool:
     # your code here
-    is_bool = True
-
-    #print(len(elements))
-    if len(elements) == 1 or len(elements) == 0:
-        return is_bool
-    
-    #type
-    #for el in elements:
-    #    if type(el) != int:
-    #       is_no_indx = True
-    #        break
-    #        #print(elements, "not int")
-     
-
-    #zero
-    #elements_2 = elements[:]
-    #elements_2.append(1)
-    
-
-    
-    #many
-    first_el = elements[0]    
-    for el in elements:
-        if first_el != el:
-            is_bool = False
-            break
-    return is_bool
+    return elements[1:] == elements[:-1]
 
 
 if __name__ == '__main__':
